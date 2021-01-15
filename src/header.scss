@@ -1,0 +1,198 @@
+$highlightColour: #b03470;
+$headerWidth: 300px;
+$headerHeight: 60px;
+
+// header {
+// 	background-color: $highlightColour;
+// 	border-radius: 0 20px 0 0;
+// 	width: $headerWidth;
+// 	z-index: 9999;
+// 	box-sizing: border-box;
+// 	padding: 10px;
+// 	height: $headerHeight;
+// }
+
+.lavender-text {
+	margin-left: 10px;
+	text-align: right;
+	display: inline-block;
+}
+
+@media (min-width: 992px) {
+    nav {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+nav {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 1px black;
+
+	strong {
+		color: white;
+		font-weight: bold;
+	}
+
+	img {
+		height: 40px;
+		vertical-align: bottom;
+	}
+
+	h1 {
+		display: inline;
+		margin: 0;
+		font-size: 28px;
+	}
+
+	h2 {
+		margin: -5px 0 0 0;
+		font-size: 0.7em;
+	}
+
+	a {
+
+		color: white;
+		text-decoration: none;
+		vertical-align: top;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media (max-width: 767px) {
+    header {
+		width: 100%;
+    }
+
+	.nav-toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: $headerHeight;
+		height: $headerHeight;
+		background-color: #b03470;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+
+	.icon-bar {
+		display: block;
+		// width: 22px;
+		height: 3px;
+		border-radius: 2px;
+		background-color: white;
+		margin: 6px 0;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav-toggle {
+		display: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header {
+        flex: 0 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-bar {
+        display: flex;
+        flex: 0 60px;
+        background-color: #b03470;
+        border-radius: 0 20px 0 0;
+    }
+
+    .lavender-text {
+        h1 {
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+
+        a {
+            background-image: url('/images/lavender-room-logo.png');
+            // background-image: url('../images/lavender-room-logo.png');
+            width: 226px;
+            height: 50px;
+            display: inline-block;
+            font-size: 0;
+            vertical-align: middle;
+        }
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 90px 0 0 0;
+        padding: 0;
+        flex: 1;
+    }
+
+    nav li {
+        padding: 0 10px;
+    }
+
+    nav li a {
+        line-height: 1.5em;
+        padding: 5px 10px;
+        display: block;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        vertical-align: top;
+    }
+
+    nav li a.active {
+        background-color: #fff;
+        color: #000;
+        text-shadow: none;
+    }
+
+	.nav-toggle {
+		display: none;
+    }
+
+    .nav-outer {
+        flex: 1;
+        background-color: rgba(0,0,0,.5);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chew {
+        padding: 0 20px;
+    }
+
+    .times {
+        flex: 0;
+        background: 0 0;
+        width: 100%;
+        border-collapse: collapse;
+        border-bottom: 1px solid #fff;
+        text-shadow: 1px 1px 1px #000;
+        padding: 20px;
+        margin: 30px 0;
+
+        td {
+            border-top: 1px solid #fff;
+        }
+    }
+
+    .today {
+        background-color: rgba(255,255,255,.2);
+    }
+}
