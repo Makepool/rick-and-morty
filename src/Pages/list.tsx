@@ -41,8 +41,7 @@ const List = ({todos, onCreatePressed}: Props) => {
     return (
         <>
             <TextField id="standard-basic" label="Filter characters" value={value} onChange={(event) => {setValue(event.target.value)}} />
-            <button onClick={() => dunno(onCreatePressed)}>dunno</button>
-            <Link to='/about'>sdsd</Link>
+            {/* <button onClick={() => dunno(onCreatePressed)}>dunno</button> */}
             {characters.length > 0 && characters.map(character => (
                 <Character id={character.id} image={character.image} name={character.name} species={character.species} key={character.id} />
             ))}

@@ -20,7 +20,11 @@ export default function Details() {
                     fetch(`https://rickandmortyapi.com/api/episode/${episodesStrings.join(',')}`)
                         .then(res => res.json())
                         .then((result: any) => {
-                            setEpisodes(result);
+                            if (Array.isArray(result)) {
+                                setEpisodes(result);
+                            } else {
+                                setEpisodes([result]);
+                            }
                         });
                 }, 200);
             });
