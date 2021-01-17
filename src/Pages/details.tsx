@@ -26,7 +26,7 @@ export default function Details() {
                                 setEpisodes([result]);
                             }
                         });
-                }, 200);
+                }, 200); // this is here to fake a slow connection so that you can see the spinner
             });
     }, [id]);
 
