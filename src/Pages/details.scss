@@ -1,0 +1,66 @@
+.loader {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar {
+    display: flex;
+}
+
+.portrait {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+    .details {
+        flex-direction: column;
+    }
+}
+
+.details {
+    display: flex;
+}
+
+.details__information {
+    margin-right: 20px;
+}
+
+.details__episodes {
+    dl {
+        margin-top: 0;
+    }
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+h1 {
+    flex: 1;
+}
+
+dl {
+    flex-flow: row wrap;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+dt {
+    padding: 2px 4px;
+    text-align: right;
+    &:after {
+        content: ':';
+    }
+}
+
+dd {
+    margin: 0;
+    padding: 2px 4px;
+    grid-column: 2;
+}
+
+.episode {
+    color: #673ab7;
+}
